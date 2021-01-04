@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300&display=swap');
+
+.bt
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#HeadText,#action,h3,.input
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#mapall
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#imgmap
+{
+    margin-left: 5%;
+    border: 0;
+    border: 20px;
+    border-color: #ffffff;
+	border-radius: 0px;
+}
+#map 
+{
+    width: 40%;
+    padding-top:34% ;
+    margin-left: 0%;
+    border: 0px;
+	border-radius: 20px;
+}
+html,
+body 
+{
+    font-family: 'JetBrains Mono','Cordia News';
+    color: #ffffff;
+    background-color: #9921e8;
+    background-image: linear-gradient(315deg, #9921e8 0%, #5f72be 75%);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#btSubmit,#btTalk,#btImg
+{
+    font-family: 'JetBrains Mono','Cordia News';
+    padding:10px;
+    background-color: #ffffff ;
+	color: #000000;
+	border: 0px;
+	cursor:pointer;
+	border-radius: 5px;
+}
+input[type="text"]
+{
+    font-family: 'Kanit','sans-serif';
+    width: 95%;
+    height: 30px;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    font-size: 16px;
+}
+#imgmap
+{
+    position: relative;
+}
+#lbQr
+{
+    font-family: 'JetBrains Mono','Cordia News';
+    color: #000000;
+}
+#btImg:disabled,
+#btImg[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+#btTalk:disabled,
+#btTalk[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+.btlist
+{
+    display: flex;
+    font-family: 'JetBrains Mono','Cordia News';
+    padding:10px;
+    background-color: #ffffff ;
+	color: #000000;
+	border: 0px;
+	cursor:pointer;
+	border-radius: 5px;
+}
