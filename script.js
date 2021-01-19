@@ -208,7 +208,8 @@ function takeshot() {
       dl.href = canvas.toDataURL();
       dl.download = "imgmap";
       document.body.appendChild(dl);
-      console.log(dl.href);
+      dl.click();
+      document.body.removeChild(dl);
       /*postdata('http://192.168.100.161:60146/print',{
         "data" : dl.href
       })*/
