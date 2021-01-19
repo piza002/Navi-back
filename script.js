@@ -5,13 +5,28 @@ var GoogleLink;
 var SelfLink;
 var diDisplay;
 var recognition;
-function initMap()
+async function initMap()
 {
-  map = new google.maps.Map(document.getElementById("map"), 
+  map = await new google.maps.Map(document.getElementById("map"), 
   {
     zoom: 15,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
+  /*fetch('http://quiet-harbor-07073.herokuapp.com/getlatlng')
+  .then((resp)=>resp.json())
+  .then(function(data)
+  {
+    pos={
+      lat: parseFloat(data[0]['lat']),
+      lng: parseFloat(data[0]['lng'])
+    };
+    SelfLink = pos.lat + "," + pos.lng;
+        map.setCenter(pos);
+        Selfmarker = new google.maps.Marker({
+          position: pos,
+          map: map,
+        });
+  }) */
   const infoWindow = new google.maps.InfoWindow();
   if (navigator.geolocation) 
   {
@@ -62,6 +77,11 @@ async function getMap()
       {
         if(data.length>1)
         {
+          var btContainer = document.getElementById("btContainer");
+          var h = document.createElement("h5");
+          var t = document.createTextNode("Please Select Your Choice");
+          h.appendChild(t);
+          btContainer.appendChild(h);
           clearmap();
           btList = data.length;
           for(var i = 0;i<data.length;i++)
@@ -189,9 +209,9 @@ function takeshot() {
       dl.download = "imgmap";
       document.body.appendChild(dl);
       console.log(dl.href);
-      postdata('http://192.168.100.161:60146/print',{
+      /*postdata('http://192.168.100.161:60146/print',{
         "data" : dl.href
-      })
+      })*/
       console.log("Complete");
     })
      
