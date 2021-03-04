@@ -47,7 +47,18 @@ body
     padding: 0;
     overflow: hidden;
 }
-#btSubmit,#btTalk,#btImg
+#btTalk
+{
+    font-family: 'JetBrains Mono','Cordia News';
+    padding:10px;
+    background-color: #ffffff ;
+	border: 0px;
+    font-weight: bold;   
+	cursor:pointer;
+	border-radius: 5px;
+    color: #10bd00;
+}
+#btSubmit,#btImg,#btHome
 {
     font-family: 'JetBrains Mono','Cordia News';
     padding:10px;
