@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Navigation Device</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="script.js"></script>
     <script
       async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"
@@ -20,8 +21,9 @@
     <br>
     <div class="bt"> 
       <form>
+        <button id="btHome" onclick="clearmap()"><i class="fa fa-home"></i> Home</button>
+        <button id="btTalk" onclick="runSpeech()">&nbsp;&nbsp;<i class="fa fa-microphone"></i>&nbsp;&nbsp;</button>
         <input type="button" id="btSubmit" onclick="getMap()" value="Submit">
-        <input type="button" id="btTalk" onclick="runSpeech()" value="Push to Talk">
         <input type="button" id="btImg" onclick="takeshot()" value="Print">
       </form>   
     </div>
